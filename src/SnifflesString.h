@@ -6,57 +6,57 @@
 class Sniffle
 {
 private:
-	char ch;
-	Sniffle* next;
-	Sniffle* prev;
+	char _ch;
+	Sniffle* _next;
+	Sniffle* _prev;
 public:
 	Sniffle(char ch);
 	~Sniffle();
 
 	char getChar()
 	{
-		return ch;
+		return _ch;
 	}
 
 	void setChar(char newch)
 	{
-		ch = newch;
+		_ch = newch;
 	}
 
 	bool compChar(char other)
 	{
-		return ch == other;
+		return _ch == other;
 	}
 
 	Sniffle* getNext()
 	{
-		return next;
+		return _next;
 	}
 
 	Sniffle* getPrev()
 	{
-		return prev;
+		return _prev;
 	}
 
 	bool nextIsNull()
 	{
-		return next == nullptr;
+		return _next == nullptr;
 	}
 
 	bool prevIsNull()
 	{
-		return prev == nullptr;
+		return _prev == nullptr;
 	}
 
 	inline bool compNextChar(char other)
 	{
-		if(!nextIsNull()) return next->ch == ch;
+		if(!nextIsNull()) return _next->_ch == other;
 		else return false;
 	}
 
 	inline bool compPrevChar(char other)
 	{
-		if(!prevIsNull()) return prev->ch == ch;
+		if(!prevIsNull()) return _prev->_ch == other;
 		else return false;
 	}
 };
