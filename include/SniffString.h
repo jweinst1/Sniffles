@@ -1,0 +1,1 @@
+#ifndef SNIFF_STRING_H
