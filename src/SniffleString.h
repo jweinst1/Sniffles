@@ -1,5 +1,5 @@
-#ifndef SNIFFLES_STRING_H
-#define SNIFFLES_STRING_H
+#ifndef SNIFFLE_STRING_H
+#define SNIFFLE_STRING_H
 
 //Main Header for Sniffles String
 
@@ -65,6 +65,8 @@ class SniffleString
 {
 private:
 	std::allocator<Sniffle> nodeAllocator;
+
+	Sniffle* alloNode(char ch);
 };
 
 #endif
