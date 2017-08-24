@@ -89,6 +89,8 @@ private:
 public:
 	SniffleString(const char* cst);
 	~SniffleString();
+	static SniffleString from(const char* cst);
+	std::string toString();
 };
 
 #endif

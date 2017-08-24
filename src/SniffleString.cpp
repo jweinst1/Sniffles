@@ -39,3 +39,23 @@ SniffleString::~SniffleString()
 {
 	deAlloStr(_str);
 }
+
+//static constructor method
+SniffleString SniffleString::from(const char* cst)
+{
+	SniffleString newstr(cst);
+	return newstr;
+}
+
+//returns string version of sniffle string
+std::string SniffleString::toString()
+{
+	std::string newstr;
+	Sniffle* strPtr = _str;
+	while(!(strPtr->nextIsNull()))
+	{
+		newstr += strPtr->getChar();
+		strPtr = strPtr->getNext();
+	}
+	return newstr;
+}

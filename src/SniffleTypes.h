@@ -5,5 +5,6 @@
 
 #include <iostream>
 #include <memory>
+#include <string>
 
 #endif
