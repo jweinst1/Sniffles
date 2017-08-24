@@ -11,3 +11,7 @@ Included in src are one `cpp` file and two `.h` header files.
 ### Advantages
 
 Using a nodular string class allows the string to change size and insert or remove elements much faster than array based strings. You cna also change individual chars much faster.
+
+### Building
+
+run `make all` to build the object file in the `/lib` dir.
