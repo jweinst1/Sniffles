@@ -33,9 +33,19 @@ public:
 		return _next;
 	}
 
+	void setNext(Sniffle* snif)
+	{
+		_next = snif;
+	}
+
 	Sniffle* getPrev()
 	{
 		return _prev;
+	}
+
+	void setPrev(Sniffle* snif)
+	{
+		_prev = snif;
 	}
 
 	bool nextIsNull()
@@ -63,10 +73,22 @@ public:
 
 class SniffleString
 {
-private:
+public:
 	std::allocator<Sniffle> nodeAllocator;
+private:
+	Sniffle* _str;
 
 	Sniffle* alloNode(char ch);
+
+	void deAlloNode(Sniffle* snif)
+	{
+		nodeAllocator.deallocate(snif, 1);
+	}
+	//deallocates and empties the entire string.
+	void deAlloStr(Sniffle* snif);
+public:
+	SniffleString(const char* cst);
+	~SniffleString();
 };
 
 #endif
